@@ -1,29 +1,38 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX root = main.tex
-\RequirePackage[l2tabu, orthodox]{nag}
-\documentclass[11pt, a4paper]{article}
+% !TEX spellcheck = en-US
+% !TEX TS-program = latexmk
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[11pt,a4paper]{article}
 
-% Margin & fonts (delete them to use a provided class style)
-\usepackage[top=1truein, bottom=1truein, left=1truein, right=1truein]{geometry}
-\usepackage{type1cm}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% Margin
+\usepackage[margin=1truein]{geometry}
+
+% Fonts
 \usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+
+% Math
+\usepackage{amsmath}
+\usepackage[transparent]{nicematrix}
 
 % hyperref
-\usepackage[bookmarksnumbered, pdfdisplaydoctitle, pdfusetitle, unicode]{hyperref}
+\usepackage[bookmarksnumbered,hypertexnames=false,pdfdisplaydoctitle,pdfusetitle,unicode]{hyperref}
 \usepackage{url}
 
 % Clever references
-\usepackage{amsmath}
-\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage[capitalize,noabbrev]{cleveref}
 \newcommand{\crefrangeconjunction}{--}
 \usepackage{autonum}
 
-% Misc
+% Tables
 \usepackage{booktabs}
+\usepackage{tablefootnote}
+
+% Misc
 \usepackage{comment}
-\usepackage[en-US]{datetime2}
 
 % okicmd
 \usepackage{okicmd}
