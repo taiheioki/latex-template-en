@@ -16,21 +16,31 @@
 \usepackage[utf8]{inputenc}
 
 % Math
-\usepackage{amsmath}
-\usepackage[transparent]{nicematrix}
+\usepackage[renew-dots,renew-matrix]{nicematrix}
 
 % hyperref
 \usepackage[bookmarksnumbered,hypertexnames=false,pdfdisplaydoctitle,pdfusetitle,unicode]{hyperref}
 \usepackage{url}
 
-% Clever references
-\usepackage[capitalize,noabbrev]{cleveref}
-\newcommand{\crefrangeconjunction}{--}
-\usepackage{autonum}
-
 % Tables
 \usepackage{booktabs}
 \usepackage{tablefootnote}
+
+% References
+\usepackage{upref}
+\usepackage[capitalize,noabbrev]{cleveref}
+\newcommand{\crefrangeconjunction}{--}
+
+\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}% chktex 41
+\let\globcount\newcount%
+\let\etoolboxforlistloop\forlistloop%
+\usepackage{autonum}
+\let\forlistloop\etoolboxforlistloop%
+
+% Bibliography
+\cslet{blx@noerroretextools}\empty%
+\usepackage[doi=false,natbib,sorting=nyt,style=trad-abbrv]{biblatex}
+\addbibresource{references.bib}
 
 % Misc
 \usepackage{comment}
@@ -65,7 +75,6 @@
 
 \input{document.tex}
 
-\bibliographystyle{abbrv}
-\bibliography{references}
+\printbibliography[heading=bibintoc]
 
 \end{document}
