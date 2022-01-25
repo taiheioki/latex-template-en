@@ -17,6 +17,12 @@
 % Math
 \usepackage[renew-dots,renew-matrix]{nicematrix}
 
+% Bibliography
+\usepackage{etoolbox}
+\cslet{blx@noerroretextools}\empty%
+\usepackage[doi=false,natbib,sorting=nyt,style=trad-abbrv]{biblatex}
+\addbibresource{references.bib}
+
 % hyperref
 \usepackage[bookmarksnumbered,hypertexnames=false,pdfdisplaydoctitle,pdfusetitle,unicode]{hyperref}
 \usepackage{url}
@@ -32,14 +38,7 @@
 
 \expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}% chktex 41
 \let\globcount\newcount%
-\let\etoolboxforlistloop\forlistloop%
 \usepackage{autonum}
-\let\forlistloop\etoolboxforlistloop%
-
-% Bibliography
-\cslet{blx@noerroretextools}\empty%
-\usepackage[doi=false,natbib,sorting=nyt,style=trad-abbrv]{biblatex}
-\addbibresource{references.bib}
 
 % Misc
 \usepackage{comment}
@@ -57,10 +56,10 @@
 \author{Taihei Oki%
   \texorpdfstring{\thanks{
     Department of Mathematical Informatics, Graduate School of Information Science and Technology, University of Tokyo, Tokyo 113-8656, Japan.
-    E-mail: \href{mailto:taihei_oki@mist.i.u-tokyo.ac.jp}{\nolinkurl{taihei_oki@mist.i.u-tokyo.ac.jp}}
+    E-mail: \href{mailto:oki@mist.i.u-tokyo.ac.jp}{\nolinkurl{oki@mist.i.u-tokyo.ac.jp}}
   }}{}
 }
-\newcommand{\mykeywords}{key, words}
+\newcommand{\mykeywords}{Key, Words}
 \hypersetup{pdfkeywords={\mykeywords}}
 
 \begin{document}

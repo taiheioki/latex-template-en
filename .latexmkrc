@@ -7,5 +7,5 @@ ensure_path('TEXINPUTS', './okicmd//');
 
 $pdf_mode = 1;
 $pdflatex = 'pdflatex -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1 %O %S';
-$bibtex = 'bibtex %O %B';
+$biber = 'biber %O --bblencoding=utf8 -u -U --output_safechars %B';
 $bibtex_use = 1.5;
