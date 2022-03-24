@@ -28,6 +28,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Download from artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: main.pdf
+
     - name: Create release
       id: create_release
       uses: actions/create-release@v1
