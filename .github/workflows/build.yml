@@ -15,3 +15,8 @@ jobs:
       uses: dante-ev/latex-action@latest
       with:
         root_file: main.tex
+
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+        path: main.pdf
