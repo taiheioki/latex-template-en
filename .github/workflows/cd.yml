@@ -40,11 +40,11 @@ jobs:
           prerelease: false
 
     - name: Upload to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf
-          asset_name: main.pdf
-          asset_content_type: application/pdf
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./main.pdf
+        asset_name: main.pdf
+        asset_content_type: application/pdf
