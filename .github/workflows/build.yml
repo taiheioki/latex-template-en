@@ -1,4 +1,4 @@
-name: Build and upload LaTeX document
+name: Build LaTeX document
 
 on: [push]
 
